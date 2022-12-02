@@ -1,0 +1,278 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta http-equiv="X-UA-Compatible" content="ie=edge">
+<link href="style.css" rel="stylesheet">
+
+<!--- Google font  -->
+
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Jolly+Lodger&display=swap" 
+rel="stylesheet">
+
+<script src="script.js" async></script>
+<title>Memory game</title>
+</head>
+
+<body>
+
+<h1 class="page-title">SPACE C<span><img src="./img/catface.png"></span>TS </h1>
+
+<div class="overlay-text visible">Click to Start</div>
+<div id="game-over-text" class="overlay-text">GAME OVER
+<span class="overlay-text-small">Restart?</span></div>
+<div id="victory-text" class="overlay-text">VICTORY<span class="overlay-text-small">Click to Restart</span></div>
+</div>
+
+<!-- bg twinkling & shooting stars -->
+
+<div class="cards-container">
+<div class="twinkling"></div>
+<div class="sky-container">
+<div class="star"></div>
+<div class="star"></div>
+<div class="star"></div>
+<div class="star"></div>
+<div class="star"></div>
+</div>
+
+<!-- bg twinkling & shooting stars /-->
+
+
+<div class="game-container">
+<div class="info-container">
+<div class="info">Time <span id="time-remaining">100</span></div>
+<div class="info">Flips <span id="flips">0</span></div>
+</div>
+
+<div class="card">
+<div class="card-back card-face">
+<img class="paw paw-top-left" src="./img/card-back/paw.png">
+<img class="paw paw-top-right" src="./img/card-back/paw.png">
+<img class="paw paw-bottom-left" src="./img/card-back/paw.png">
+<img class="paw paw-bottom-right" src="./img/card-back/paw.png">
+<img class="sun" src="img/card-back/sun.png">
+</div>
+<div class="card-front card-face"><img class="card-value" src="img/cards-value/one.png"></div>
+</div>
+
+<div class="card">
+<div class="card-back card-face">
+<img class="paw paw-top-left" src="./img/card-back/paw.png">
+<img class="paw paw-top-right" src="./img/card-back/paw.png">
+<img class="paw paw-bottom-left" src="./img/card-back/paw.png">
+<img class="paw paw-bottom-right" src="./img/card-back/paw.png">
+<img class="sun" src="img/card-back/sun.png">
+</div>
+<div class="card-front card-face"><img class="card-value" src="img/cards-value/two.png"></div>
+</div>
+
+<div class="card">
+<div class="card-back card-face">
+<img class="paw paw-top-left" src="./img/card-back/paw.png">
+<img class="paw paw-top-right" src="./img/card-back/paw.png">
+<img class="paw paw-bottom-left" src="./img/card-back/paw.png">
+<img class="paw paw-bottom-right" src="./img/card-back/paw.png">
+<img class="sun" src="img/card-back/sun.png">
+</div>
+<div class="card-front card-face"><img class="card-value" src="img/cards-value/three.png"></div>
+</div>
+
+<div class="card">
+<div class="card-back card-face">
+<img class="paw paw-top-left" src="./img/card-back/paw.png">
+<img class="paw paw-top-right" src="./img/card-back/paw.png">
+<img class="paw paw-bottom-left" src="./img/card-back/paw.png">
+<img class="paw paw-bottom-right" src="./img/card-back/paw.png">
+<img class="sun" src="img/card-back/sun.png">
+</div>
+<div class="card-front card-face"><img class="card-value" src="img/cards-value/four.png"></div>
+</div>
+
+<div class="card">
+<div class="card-back card-face">
+<img class="paw paw-top-left" src="./img/card-back/paw.png">
+<img class="paw paw-top-right" src="./img/card-back/paw.png">
+<img class="paw paw-bottom-left" src="./img/card-back/paw.png">
+<img class="paw paw-bottom-right" src="./img/card-back/paw.png">
+<img class="sun" src="img/card-back/sun.png">
+</div>
+<div class="card-front card-face"><img class="card-value" src="img/cards-value/five.png"></div>
+</div>
+
+<div class="card">
+<div class="card-back card-face">
+<img class="paw paw-top-left" src="./img/card-back/paw.png">
+<img class="paw paw-top-right" src="./img/card-back/paw.png">
+<img class="paw paw-bottom-left" src="./img/card-back/paw.png">
+<img class="paw paw-bottom-right" src="./img/card-back/paw.png">
+<img class="sun" src="img/card-back/sun.png">
+</div>
+<div class="card-front card-face"><img class="card-value" src="img/cards-value/six.png"></div>
+</div>
+
+<div class="card">
+<div class="card-back card-face">
+<img class="paw paw-top-left" src="./img/card-back/paw.png">
+<img class="paw paw-top-right" src="./img/card-back/paw.png">
+<img class="paw paw-bottom-left" src="./img/card-back/paw.png">
+<img class="paw paw-bottom-right" src="./img/card-back/paw.png">
+<img class="sun" src="img/card-back/sun.png">
+</div>
+<div class="card-front card-face"><img class="card-value" src="img/cards-value/seven.png"></div>
+</div>
+
+<div class="card">
+<div class="card-back card-face">
+<img class="paw paw-top-left" src="./img/card-back/paw.png">
+<img class="paw paw-top-right" src="./img/card-back/paw.png">
+<img class="paw paw-bottom-left" src="./img/card-back/paw.png">
+<img class="paw paw-bottom-right" src="./img/card-back/paw.png">
+<img class="sun" src="img/card-back/sun.png">
+</div>
+<div class="card-front card-face"><img class="card-value" src="img/cards-value/eight.png"></div>
+</div>
+
+<div class="card">
+<div class="card-back card-face">
+<img class="paw paw-top-left" src="./img/card-back/paw.png">
+<img class="paw paw-top-right" src="./img/card-back/paw.png">
+<img class="paw paw-bottom-left" src="./img/card-back/paw.png">
+<img class="paw paw-bottom-right" src="./img/card-back/paw.png">
+<img class="sun" src="img/card-back/sun.png">
+</div>
+<div class="card-front card-face"><img class="card-value" src="img/cards-value/nine.png"></div>
+</div>
+
+<div class="card">
+<div class="card-back card-face">
+<img class="paw paw-top-left" src="./img/card-back/paw.png">
+<img class="paw paw-top-right" src="./img/card-back/paw.png">
+<img class="paw paw-bottom-left" src="./img/card-back/paw.png">
+<img class="paw paw-bottom-right" src="./img/card-back/paw.png">
+<img class="sun" src="img/card-back/sun.png">
+</div>
+<div class="card-front card-face"><img class="card-value" src="img/cards-value/ten.png"></div>
+</div>
+
+<div class="card">
+<div class="card-back card-face">
+<img class="paw paw-top-left" src="./img/card-back/paw.png">
+<img class="paw paw-top-right" src="./img/card-back/paw.png">
+<img class="paw paw-bottom-left" src="./img/card-back/paw.png">
+<img class="paw paw-bottom-right" src="./img/card-back/paw.png">
+<img class="sun" src="img/card-back/sun.png">
+</div>
+<div class="card-front card-face"><img class="card-value" src="img/cards-value/one.png"></div>
+</div>
+
+<div class="card">
+<div class="card-back card-face">
+<img class="paw paw-top-left" src="./img/card-back/paw.png">
+<img class="paw paw-top-right" src="./img/card-back/paw.png">
+<img class="paw paw-bottom-left" src="./img/card-back/paw.png">
+<img class="paw paw-bottom-right" src="./img/card-back/paw.png">
+<img class="sun" src="img/card-back/sun.png">
+</div>
+<div class="card-front card-face"><img class="card-value" src="img/cards-value/two.png"></div>
+</div>
+
+<div class="card">
+<div class="card-back card-face">
+<img class="paw paw-top-left" src="./img/card-back/paw.png">
+<img class="paw paw-top-right" src="./img/card-back/paw.png">
+<img class="paw paw-bottom-left" src="./img/card-back/paw.png">
+<img class="paw paw-bottom-right" src="./img/card-back/paw.png">
+<img class="sun" src="img/card-back/sun.png">
+</div>
+<div class="card-front card-face"><img class="card-value" src="img/cards-value/three.png"></div>
+</div>
+
+<div class="card">
+<div class="card-back card-face">
+<img class="paw paw-top-left" src="./img/card-back/paw.png">
+<img class="paw paw-top-right" src="./img/card-back/paw.png">
+<img class="paw paw-bottom-left" src="./img/card-back/paw.png">
+<img class="paw paw-bottom-right" src="./img/card-back/paw.png">
+<img class="sun" src="img/card-back/sun.png">
+</div>
+<div class="card-front card-face"><img class="card-value" src="img/cards-value/four.png"></div>
+</div>
+
+<div class="card">
+<div class="card-back card-face">
+<img class="paw paw-top-left" src="./img/card-back/paw.png">
+<img class="paw paw-top-right" src="./img/card-back/paw.png">
+<img class="paw paw-bottom-left" src="./img/card-back/paw.png">
+<img class="paw paw-bottom-right" src="./img/card-back/paw.png">
+<img class="sun" src="img/card-back/sun.png">
+</div>
+<div class="card-front card-face"><img class="card-value" src="img/cards-value/five.png"></div>
+</div>
+
+<div class="card">
+<div class="card-back card-face">
+<img class="paw paw-top-left" src="./img/card-back/paw.png">
+<img class="paw paw-top-right" src="./img/card-back/paw.png">
+<img class="paw paw-bottom-left" src="./img/card-back/paw.png">
+<img class="paw paw-bottom-right" src="./img/card-back/paw.png">
+<img class="sun" src="img/card-back/sun.png">
+</div>
+<div class="card-front card-face">
+<img class="card-value" src="img/cards-value/six.png">
+</div>
+</div>
+
+<div class="card">
+<div class="card-back card-face">
+<img class="paw paw-top-left" src="./img/card-back/paw.png">
+<img class="paw paw-top-right" src="./img/card-back/paw.png">
+<img class="paw paw-bottom-left" src="./img/card-back/paw.png">
+<img class="paw paw-bottom-right" src="./img/card-back/paw.png">
+<img class="sun" src="img/card-back/sun.png">
+</div>
+<div class="card-front card-face"><img class="card-value" src="img/cards-value/seven.png"></div>
+</div>
+
+<div class="card">
+<div class="card-back card-face">
+<img class="paw paw-top-left" src="./img/card-back/paw.png">
+<img class="paw paw-top-right" src="./img/card-back/paw.png">
+<img class="paw paw-bottom-left" src="./img/card-back/paw.png">
+<img class="paw paw-bottom-right" src="./img/card-back/paw.png">
+<img class="sun" src="img/card-back/sun.png">
+</div>
+<div class="card-front card-face"><img class="card-value" src="img/cards-value/eight.png"></div>
+</div>
+
+<div class="card">
+<div class="card-back card-face">
+<img class="paw paw-top-left" src="./img/card-back/paw.png">
+<img class="paw paw-top-right" src="./img/card-back/paw.png">
+<img class="paw paw-bottom-left" src="./img/card-back/paw.png">
+<img class="paw paw-bottom-right" src="./img/card-back/paw.png">
+<img class="sun" src="img/card-back/sun.png">
+</div>
+<div class="card-front card-face">
+<img class="card-value" src="img/cards-value/nine.png">
+</div>
+</div>
+
+<div class="card">
+<div class="card-back card-face">
+<img class="paw paw-top-left" src="./img/card-back/paw.png">
+<img class="paw paw-top-right" src="./img/card-back/paw.png">
+<img class="paw paw-bottom-left" src="./img/card-back/paw.png">
+<img class="paw paw-bottom-right" src="./img/card-back/paw.png">
+<img class="sun" src="img/card-back/sun.png">
+</div>
+<div class="card-front card-face"><img class="card-value" src="img/cards-value/ten.png"></div>
+</div>
+
+</div>
+</div>
+</body>
+</html>
