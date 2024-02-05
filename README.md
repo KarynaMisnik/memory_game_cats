@@ -1,3 +1,5 @@
-# memory_game_cats
+# Memory Game "Space Cats"
+
+
 
 Play: https://karynamisnik.github.io/memory_game_cats/
